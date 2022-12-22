@@ -1,0 +1,26 @@
+.promo {
+    padding: 0 30px;
+    margin-bottom: 20px;   
+}
+
+.promo_card_container {
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    animation: ease-in;
+}
+
+.promo_image_container img {
+    overflow: hidden;
+    height: 200px;
+}
+
+.promo_card_container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.promo_card_content {
+    margin-left: 10px;
+}
