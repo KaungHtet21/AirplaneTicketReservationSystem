@@ -19,6 +19,7 @@
 .promo_card_container:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 15px 0px;
+    cursor: pointer;
 }
 
 .promo_card_content {

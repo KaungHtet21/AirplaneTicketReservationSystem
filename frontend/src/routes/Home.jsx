@@ -2,8 +2,10 @@ import React from "react";
 import Hero from "../components/Home/Hero";
 import Navbar from "../components/Navbar/Navbar";
 import HeroImg from "../assets/hero.jfif"
-import Recommendation from "../components/recommendation/Recommendation";
-import Promo from "../components/promo/Promo";
+import Recommendation from "../components/Recommendation/Recommendation";
+import Promo from "../components/Promo/Promo";
+import AcceptedPayments from "../components/AcceptedPayments/AcceptedPayments";
+import Foot from "../components/Foot/Foot";
 
 export default function Home() {
   return (
@@ -22,6 +24,9 @@ export default function Home() {
       <Recommendation/>
       <hr style={{marginTop: "20px", marginBottom: "20px"}} />
       <Promo/>
+      <hr style={{marginTop: "20px", marginBottom: "20px"}} />
+      <AcceptedPayments/>
+      <Foot/>
     </div>
   );
 }

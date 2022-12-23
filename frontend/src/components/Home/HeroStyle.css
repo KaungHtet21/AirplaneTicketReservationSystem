@@ -54,6 +54,12 @@ img {
     color: #222;
 }
 
+.show:hover {
+    background: #065a9e;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
 .hero-text .hide{
     display: none;
 }
