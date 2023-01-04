@@ -77,6 +77,17 @@ button:hover{
     display: none;
 }
 
+.nav_signin_btn {
+    color: #fff;
+    background-color: #065a9e;
+}
+
+.nav_signin_btn:hover {
+    background: rgb(103, 43, 43);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
 @media screen and (max-width: 850px) {
     .NavbarItems{
         z-index: 99;

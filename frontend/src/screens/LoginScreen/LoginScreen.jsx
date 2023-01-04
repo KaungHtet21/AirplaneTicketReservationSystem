@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import "./LoginScreen.css";
 import paper_plane from "../../assets/paper_plane.gif";
 import google_icon from "../../assets/google_icon.png";
@@ -33,10 +34,12 @@ export default function LoginScreen() {
               src={google_icon}
               alt=""
             />
-            <span> Google</span>
+            <span> Sign in with Google</span>
           </button>
           <div style={{ fontSize: "12px", marginTop: "10px" }}>
-            <span>Sign up</span>
+            <Link style={{textDecoration: "none"}} to="/signup">
+              <span>Sign up</span>
+            </Link>
             <span> | </span>
             <span style={{ color: "#065a9e" }}>Forgot Password</span>
           </div>

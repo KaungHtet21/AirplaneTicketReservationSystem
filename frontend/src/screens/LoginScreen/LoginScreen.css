@@ -52,6 +52,12 @@ form {
     background-color: #fff;
 }
 
+.auth_info_wrapper button:hover {
+    background: rgb(103, 43, 43);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
 .auth_input_field{
     width: 100%;
     padding: 10px;
@@ -62,7 +68,7 @@ form {
     padding: 0.5rem;
     display: block;
     margin-top: 0.3rem;
-    border-width: 0 0 2px 0;
+    border-width: 0 0 1px 0;
     width: 100%;
 }
 

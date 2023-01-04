@@ -31,7 +31,7 @@ class Navbar extends Component {
             );
           })}
           <Link to="/login">
-            <button>Sign Up</button>
+            <button className="nav_signin_btn">Sign In</button>
           </Link>
         </ul>
       </nav>
