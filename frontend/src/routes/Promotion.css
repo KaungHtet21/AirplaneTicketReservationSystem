@@ -1,0 +1,49 @@
+.promo_types {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.promo_types li {
+    position: relative;
+    padding: 0 10px;
+}
+
+.promo_types li::after{
+    content: "";
+    position: absolute;
+    background-color: #065a9e;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.promo_types li:hover {
+    cursor: pointer;
+}
+
+.promo_types .active::after{
+    width: 100%;
+}
+
+.program_div ul li {
+    margin-bottom: 8px;
+}
+
+.program_card_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.program_card_container img {
+    width: 380px;
+    height: 200px;
+    border-radius: 16px;
+}
+
+.display_none {
+    display: none;
+}

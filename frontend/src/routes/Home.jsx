@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../screens/HomeScreen/Hero";
+import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
 import HeroImg from "../assets/hero.jfif"
 import Recommendation from "../components/Recommendation/Recommendation";

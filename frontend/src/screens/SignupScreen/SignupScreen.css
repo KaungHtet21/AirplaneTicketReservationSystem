@@ -48,7 +48,7 @@ input {
     padding: 8px;
 }
 
-.signup_button_div {
+/* .signup_button_div {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -70,6 +70,18 @@ input {
 }
 
 .signup_button_div button:hover {
+    background: rgb(103, 43, 43);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+} */
+.signup_container button {
+    border: 1px solid;
+    color: #fff;
+    background-color: #065a9e;
+    margin: 10px 80px;
+}
+
+.signup_container button:hover {
     background: rgb(103, 43, 43);
     color: #fff;
     transition: all 0.2s ease-in-out;

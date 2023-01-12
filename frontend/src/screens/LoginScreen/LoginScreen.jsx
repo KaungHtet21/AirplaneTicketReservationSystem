@@ -1,10 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./LoginScreen.css";
 import paper_plane from "../../assets/paper_plane.gif";
 import google_icon from "../../assets/google_icon.png";
+import { useState } from "react";
 
 export default function LoginScreen() {
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const handleLoginOnClick = () => {
+    console.log(email + ' ' + password);
+  }
+
   return (
     <div className="login">
       <div className="login_container">
@@ -17,6 +26,7 @@ export default function LoginScreen() {
               type="text"
               className="input"
               placeholder="Enter your email address"
+              onChange={e=>setEmail(e.target.value)}
             />
           </div>
           <div className="auth_input_field">
@@ -25,17 +35,18 @@ export default function LoginScreen() {
               type="password"
               className="input"
               placeholder="Enter your password"
+              onChange={e=>setPassword(e.target.value)}
             />
           </div>
-          <button>Login</button>
-          <button>
+          <button onClick={handleLoginOnClick}>Login</button>
+          {/* <button onClick={handleGoogleLogInOnClick}>
             <img
               style={{ width: "16px", height: "16px" }}
               src={google_icon}
               alt=""
             />
             <span> Sign in with Google</span>
-          </button>
+          </button> */}
           <div style={{ fontSize: "12px", marginTop: "10px" }}>
             <Link style={{textDecoration: "none"}} to="/signup">
               <span>Sign up</span>

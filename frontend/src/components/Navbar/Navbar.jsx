@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
-import { MenuItems } from "./MenuItems";
+import { MenuItems } from "../Lists/MenuItems";
 import "./NavbarStyles.css";
 import miit_logo from "../../assets/miit_logo.png";
 
