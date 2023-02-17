@@ -10,7 +10,7 @@ export default function TravelPolicy() {
         <h1 style={{ color: "#065a9e", marginBottom: "20px" }}>
           Travel Policy
         </h1>
-        <h2 style={{ color: "#065a9e" }}>NOTICE</h2>
+        <h2 style={{ color: "#065a9e", marginBottom: "20px" }}>NOTICE</h2>
         <p style={{ paddingBottom: "10px" }}>
           If the passenger’s journey involves an ultimate destination or stop in
           a country other than the country of departure the Warsaw Convention

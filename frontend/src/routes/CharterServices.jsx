@@ -40,7 +40,7 @@ export default function CharterServices() {
         <p>
           "For more information, please contact us at{" "}
           <a href="" style={{ color: "#065a9e", textDecoration: "none" }}>
-            charter@airkbz.com
+            charter@airmiit.com
           </a>
           ".
         </p>

@@ -15,6 +15,7 @@ import Offices from './routes/Offices';
 import Promotion from './routes/Promotion';
 import TermsAndConditions from './routes/TermsAndConditions';
 import TravelPolicy from './routes/TravelPolicy';
+import FlyScreen from './screens/FlyScreen/FlyScreen';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='/offices' element={<Offices/>}/>
         <Route path='/terms&conditions' element={<TermsAndConditions/>}/>
         <Route path='/travel_policy' element={<TravelPolicy/>}/>
+        <Route path='/fly' element={<FlyScreen/>}/>
       </Routes>
     </div>
   );

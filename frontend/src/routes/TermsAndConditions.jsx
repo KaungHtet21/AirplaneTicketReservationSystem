@@ -11,7 +11,7 @@ export default function TermsAndConditions() {
           Ticketing Terms & Conditions
         </h3>
         <ol style={{paddingLeft: "100px", paddingRight: "100px", letterSpacing: "1px", paddingBottom: "20px"}}>
-          <li>Tickets are Valid for AIR KBZ only and non-transferable.</li>
+          <li>Tickets are Valid for AIR MIIT only and non-transferable.</li>
           <li>Selling Fares are equal to Air fares, YQ, YR and Airport Tax.</li>
           <li>
             Child fares are equal to 75% of applicable adult fare, YQ, YR and
