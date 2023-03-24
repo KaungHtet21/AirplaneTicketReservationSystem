@@ -12,8 +12,6 @@ export default function AcceptedPayments() {
         <div className="payment_logos">
             <img src={master_card} alt="" />
             <img src={visa} alt="" />
-            <img src={mpu} alt="" />
-            <img src={jcb} alt="" />
         </div>
     </div>
   )

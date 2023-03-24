@@ -168,20 +168,6 @@ export default function TravelPolicy() {
           information may be obtained from the carrier.
         </p>
         <hr />
-        <h2
-          style={{ color: "#065a9e", marginBottom: "20px", marginTop: "20px" }}
-        >
-          TICKET CHANGES
-        </h2>
-        <p style={{ paddingBottom: "10px" }}>
-          Cancellations and date changes are allowed up to 2 hours prior to
-          departure. Passengers must be paid the change fee indicated on the
-          e-ticket display, PLUS the difference in the fare. Same fare is not
-          guaranteed. Exchanges are allowed for the ALL sectors. Fees apply for
-          each passenger. Tickets are non-transferable and non-endorsable, and
-          are subject to the following terms and conditions (which are subject
-          to change).
-        </p>
         <hr />
         <h2
           style={{ color: "#065a9e", marginBottom: "20px", marginTop: "20px" }}

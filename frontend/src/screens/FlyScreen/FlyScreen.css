@@ -15,6 +15,7 @@
     flex-direction: column;
     padding: 30px;
     gap: 10px;
+    justify-content: center;
 }
 
 .fly_btn_container {
@@ -95,4 +96,17 @@
 .passenger_controls button:hover {
     cursor: pointer;
     background: #3181c2;
+}
+
+.search_flight_btn {
+    background: #065a9e;
+    color: white;
+}
+
+.search_flight_btn:hover {
+    background-color: #3181c2;
+}
+
+.error_display {
+    display: none;
 }

@@ -1,15 +1,21 @@
 import React from "react";
+import { useNavigate, useNavigation } from "react-router-dom";
 import "./RecommendationStyles.css";
 import { Places } from "./RecommendPlaces";
 
 export default function Recommendation() {
+  const navigate = useNavigate();
+  function handleCardOnClick(from, to) {
+    navigate(`/recommendOnClick?from=${from}&to=${to}`)
+  }
+
   return (
     <div className="recommendation">
       <h2 style={{marginBottom: "20px", color: "#065a9e"}}>Recommend for you</h2>
       <ul className="recommend_places_list">
         {Places.map((place, index) => {
           return (
-            <div className="recommend_cards">
+            <div className="recommend_cards" onClick={() => {handleCardOnClick(place.from, place.to)}}>
               <li key={index}>
                 <img
                   src={place.img_path}
@@ -29,9 +35,6 @@ export default function Recommendation() {
                   </div>
                   <div className="footer">
                     <hr />
-                    <p className="recommend_card_image_description">
-                      Start from
-                    </p>
                     <div className="recommend_card_image_title">
                       {place.price}
                     </div>
@@ -42,23 +45,6 @@ export default function Recommendation() {
           );
         })}
       </ul>
-      {/* <div className="recommend_cards">
-        <img src={bkk} alt="" className="recommend_card_img" />
-
-        <div className="recommend_card_image_overlay">
-          <div className="header">
-            <p className="recommend_card_image_description">From Yangon</p>
-          </div>
-
-          <div className="recommend_card_image_destination_title">Bangkok</div>
-          <div className="footer">
-            <hr />
-            <p className="recommend_card_image_description">Start from</p>
-            <div className="recommend_card_image_title">$800</div>
-          </div>
-        </div>
-        
-      </div> */}
     </div>
   );
 }

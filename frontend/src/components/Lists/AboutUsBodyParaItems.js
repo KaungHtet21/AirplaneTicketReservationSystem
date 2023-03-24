@@ -1,18 +1,18 @@
 export const AboutUsBodyParaItems = [
-    {
-        title: "About us",
-        para: "Under the guidance of Myanmar Investment Commission AIR MIIT was established in June 2010. The purpose of this establishment is to help the fellow existing airlines cater the growing demands of air travel in Myanmar. Taking off her very first commercial flight on April 2nd 2011, to this date AIR MIIT has unveiled 15 destinations altogether. Destinations during the initial phase include Yangon, Nyaung U, Mandalay, Heho, and Myeik. With the support of the valued customers and dedicated employees, as of today the airline has expanded its operation to Nay Pyi Taw, Kalay, Myitkyina, Lashio, Tachileik, Loikaw, Dawei, Kaw Thaung, Thandwe and Sittwe. AIR MIIT aims to have more than 20 destinations in the near future, covering all the commercial centers of Myanmar."
-    },
-    {
-        title: "Our Vision",
-        para: "To become the most renowned commercial airline in Myanmar."
-    },
-    {
-        title: "Our Mission",
-        para: "To cater the demands of the industry by providing excellent customer service through safety, comfort, hospitality and enriching employees."
-    },
-    {
-        title: "Service Philosophy in AIR MIIT",
-        para: "AIR MIIT intends to interact actively with its customers to create a superior value of service. Therefore, it focuses on both employees and customers by establishing a “service-profit chain” culture, which aims to:"
-    }
-]
+  {
+    title: "About us",
+    para: "Myanmar Investment Commission has played a pivotal role in the establishment of KAE Airline , a fledgling airline company that began operations in December 2022. The purpose behind its inception was to cater to the increasing demand for air travel in Myanmar and assist existing airlines in the country.The airline commenced its operations with a few select destinations, including Yangon, Mandalay, and Bagan. However, with the unwavering support of its loyal customers and the hard work of its dedicated employees, KAE Airline has expanded its operations to cover Nay Pyi Taw, Kalaw , Lashio, Bago, Taunggyi, and Heho.KAE Airline envisions expanding its reach to more than 20 destinations in the near future, covering all the major commercial centers in Myanmar. The company remains committed to delivering exceptional service and aims to establish itself as a leading player in the aviation industry in the region.",
+  },
+  {
+    title: "Our Vision",
+    para: "KAE Airline aspires to carve a niche for itself as the preeminent commercial airline in Myanmar. The airline company is committed to providing unrivalled service, offering passengers an unforgettable experience with every flight.Through a steadfast dedication to excellence and unwavering customer focus, KAE Airline aims to become the most renowned and respected airline in the country. The company has set its sights on achieving this goal by consistently expanding its reach to new destinations, delivering superior in-flight amenities, and offering competitive pricing.With a steadfast commitment to its core values, KAE Airline strives to establish itself as a paragon of success in the aviation industry in Myanmar. The company remains focused on achieving its vision of becoming the go-to airline for travellers across the country and beyond.",
+  },
+  {
+    title: "Our Mission",
+    para: "KAE Airline , our topmost priority is to cater to the ever-growing demands of the aviation industry by providing our passengers with exceptional customer service. We strive to offer our passengers the highest level of safety, comfort, and hospitality during every flight.We are dedicated to creating an environment that is conducive to enriching our employees' lives and careers. Our workforce is our greatest asset, and we are committed to nurturing our employees' talents, skills, and abilities.Through a customer-centric approach, we aim to provide an unparalleled experience to our passengers, one that surpasses their expectations. We are constantly pushing ourselves to raise the bar and set new standards of excellence in the aviation industry in Myanmar.At KAE Airline , we believe in fostering strong relationships with our customers, understanding their needs, and exceeding their expectations. We are committed to providing a seamless and stress-free travel experience to our passengers, and we strive to deliver on this promise with every flight.",
+  },
+  {
+    title: "Service Philosophy in AIR KAE",
+    para: "At KAE Airline , our service philosophy is rooted in the belief that our customers and employees are at the heart of our business. We are committed to creating a culture of service excellence, which is centred on the “service-profit chain” model. This model enables us to enhance our internal service quality, resulting in a greater service value for our customers. By focusing on the needs of our customers and employees, we aim to establish strong customer loyalty and create a healthy environment for growth. Our approach to service is customer-centric, which means we strive to interact actively with our customers to understand their needs and exceed their expectations. We believe in building lasting relationships with our customers, and we are dedicated to providing a seamless and stress-free travel experience with every flight. In order to deliver on our service philosophy, we prfioritize employee training and development to ensure that our staff is equipped with the necessary skills and expertise to deliver exceptional service. We are committed to creating a culture of excellence, which drives our efforts to continuously improve our services and create greater value for our customers.",
+  },
+];

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/mail',[MailController::class,'sendEticket'])->name('sendEticket');
+Route::get('/counter',[MailController::class,'overTheCounter'])->name('overthecounter');
+Route::get('/member',[MailController::class,'member'])->name('member');
+Route::get('/code',[UserController::class,'getCode']);
+Route::get('/transaction',[MailController::class,'gettransaction']);

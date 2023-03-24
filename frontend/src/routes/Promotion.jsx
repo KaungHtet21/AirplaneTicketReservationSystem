@@ -8,6 +8,9 @@ import jade from "../assets/jade_program.png";
 import ruby from "../assets/ruby_program.png";
 import diamond from "../assets/diamond_program.png";
 import Foot from "../components/Foot/Foot";
+import gold from "../assets/gold.jpg";
+import silver from "../assets/silver.jpg";
+import platinum from "../assets/platinum.jpg";
 
 export default function Promotion() {
   const [promo, setPromo] = useState(true);
@@ -44,8 +47,8 @@ export default function Promotion() {
         </ul>
 
         <div
-          className={promo ? "promo_div": "promo_div display_none"}
-          style={{ marginTop: "40px"}}
+          className={promo ? "promo_div" : "promo_div display_none"}
+          style={{ marginTop: "40px" }}
         >
           <Swiper
             style={{ padding: "50px" }}
@@ -85,85 +88,102 @@ export default function Promotion() {
           </Swiper>
         </div>
 
-        <div className={program ? "program_div": "program_div display_none"} style={{ marginTop: "40px" }}>
+        <div
+          className={program ? "program_div" : "program_div display_none"}
+          style={{ marginTop: "40px" }}
+        >
           <div className="program_card_container">
-            <img src={jade} alt="" />
-            <img src={ruby} alt="" />
-            <img src={diamond} alt="" />
+            <img src={silver} alt="" />
+            <img src={gold} alt="" />
+            <img src={platinum} alt="" />
           </div>
           <h3
             style={{
               color: "#065a9e",
               paddingLeft: "100px",
               paddingTop: "30px",
-              paddingBottom: "30px"
+              paddingBottom: "30px",
             }}
           >
             Membership Program
           </h3>
-          <ul style={{ paddingLeft: "100px", letterSpacing: "1px", paddingRight: "100px", paddingBottom: "20px" }}>
+          <ul
+            style={{
+              paddingLeft: "100px",
+              letterSpacing: "1px",
+              paddingRight: "100px",
+              paddingBottom: "20px",
+            }}
+          >
             <li>
-              The Membership Program, operated by the airline Myanmar Airways
-              International & Air MIIT is a loyalty program for Air MIIT
-              passengers.
+              Membership Program: Frequent Flyer A flight membership program is
+              a loyalty program offered by KAE airlines to reward frequent
+              flyers. Members of these programs are offered special benefits,
+              such as access to airport lounges, priority check-in, free baggage
+              allowances, and the ability to earn and redeem points or miles for
+              free flights or upgrades.
             </li>
             <li>
-              Members of the Program are credited with miles based on the
-              flights they fly with our airlines. The miles are credited by
-              predefined rates and terms and conditions, and the limitations
-              presented in this program.
+              One of the benefits that some flight membership programs offer is
+              the ability to purchase a certain number of tickets in advance at
+              a discounted price. For example, an airline may offer a membership
+              program that allows members to purchase 10 tickets at a discounted
+              rate, which can be used for future travel. As a member, you'll
+              have access to exclusive benefits and rewards to enhance your
+              travel experience. One of the key benefits of our program is the
+              ability to purchase a specific number of tickets in advance at a
+              discounted rate.
             </li>
             <li>
-              Sky Smile Program membership is open to any individual older than
-              12 years, provided that the person fulfills all of the membership
-              requirements and is not explicitly prohibited by the legislation
-              to join such membership program.
-            </li>
-            <li>
-              Any applicant interested in joining Sky Smile Program is required
-              to complete Sky Smile Program membership form available at
-              www.maiair.com or www.airkbz.com , which shall be considered to
-              constitute a valid application. The person shall confirm that he
-              is acquainted with the Terms & Conditions of the Program and
-              agrees to abide by them.
-            </li>
-            <li>
+              Members can earn flight credits by booking flights through the
+              online flight system. Every flight booked earns one flight credit,
+              and once a member reaches the required number of flight credits,
+              they are automatically upgraded to the next membership level.
               Membership is free; to keep the membership active, newly
               registered members need to fly at least once within the first six
               (6) months – if this no activity is recorded, then membership
               shall be automatically terminated.
             </li>
+            <li>Membership Levels:</li>
             <li>
-              Membership takes effect immediately once the Sky Smile Program
-              membership number is issued by the airlines.
+              Silver: Achieved after 10 flights, includes all benefits listed
+              above
             </li>
             <li>
-              Membership is not open to legal persons or other groups or
-              associations.
-            </li>
-            <li>Only one Sky Smile Program is allowed per member.</li>
-            <li>
-              In case of loss, members can reissue their electronic member cards
-              with the penalty fee of USD 20.
+              Gold: Achieved after 25 flights, includes all benefits listed
+              above plus an additional free flight ticket per year
             </li>
             <li>
-              The validity of the program is divided into two parts, one for the
-              Membership Tier and Award Mileage
+              Platinum: Achieved after 50 flights, includes all benefits listed
+              above plus an additional free flight ticket per year and access to
+              airport lounges
             </li>
+            <li>Silver Membership Benefits:</li>
             <li>
-              The exercise of rights connected with Sky Smile membership can be
-              transferred from Sky Smile member to another person. Sky Smile
-              Program members have the right to Sky Smile program benefits only
-              after their details are recorded on the Sky Smile database.
+              Access to exclusive deals and discounts on flights, hotels, and
+              car rentals Priority check-in at the airport Free seat selection
+              and extra baggage allowance Early boarding privileges 24/7
+              customer support
             </li>
+            <li>Gold Membership Benefits:</li>
             <li>
-              Any requests for an upgrade to any tiers by members will be
-              strictly not entertained if the set criteria are adhered.
+              All the benefits of silver membership, plus: Lounge access at
+              select airports Priority baggage handling Complimentary upgrades
+              to premium seats, when available Faster security checks at select
+              airports Higher rewards points for each booking
+            </li>
+            <li>Platinum Membership Benefits :</li>
+            <li>
+              All the benefits of gold membership, plus: Guaranteed availability
+              of seats, even during peak travel season Concierge service for
+              personalized travel assistance Complimentary chauffeur service to
+              and from the airport Personalized travel itineraries Exclusive
+              access to private airport lounges
             </li>
           </ul>
         </div>
       </div>
-      <Foot/>
+      <Foot />
     </>
   );
 }

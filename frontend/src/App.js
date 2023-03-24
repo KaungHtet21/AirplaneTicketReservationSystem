@@ -16,6 +16,11 @@ import Promotion from './routes/Promotion';
 import TermsAndConditions from './routes/TermsAndConditions';
 import TravelPolicy from './routes/TravelPolicy';
 import FlyScreen from './screens/FlyScreen/FlyScreen';
+import FlightSectionScreen from './screens/FlightSection/FlightSectionScreen';
+import PassengersSection from './routes/PassengersSection';
+import PaymentScreen from './screens/PaymentScreen/PaymentScreen';
+import RecommendOnclick from './screens/RecommendOnclick/RecommendOnclick';
+import Baggage from './routes/Baggage';
 
 function App() {
   return (
@@ -32,6 +37,11 @@ function App() {
         <Route path='/terms&conditions' element={<TermsAndConditions/>}/>
         <Route path='/travel_policy' element={<TravelPolicy/>}/>
         <Route path='/fly' element={<FlyScreen/>}/>
+        <Route path='/flightSection' element={<FlightSectionScreen/>}/>
+        <Route path='/passengersSection' element={<PassengersSection/>}/>
+        <Route path='/paymentSection' element={<PaymentScreen/>}/>
+        <Route path='/recommendOnClick' element={<RecommendOnclick/>}/>
+        <Route path='/baggage' element={<Baggage/>}/>
       </Routes>
     </div>
   );

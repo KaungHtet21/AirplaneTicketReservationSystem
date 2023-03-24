@@ -1,0 +1,66 @@
+.payment_screen {
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment_form_container {
+    display: flex;
+}
+
+.payment_left_container {
+    flex: 30%;
+    padding-right: 10px;
+}
+
+.payment_right_container {
+    flex: 70%;
+}
+
+.card_container {
+    width: 100%;
+    padding: 8px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+}
+
+.global_card {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.global_card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.global_card button {
+    background-color: #065a9e;
+    color: white;
+}
+
+.logos > img {
+    width: 50px;
+    height: 30px;
+}
+
+.payment_header_container {
+    display: flex;
+    justify-content: space-between ;
+    width: 380px;
+    background-color: #74b8ef;
+    padding: 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+}
+
+.payment_header_container > img {
+    width: 70px;
+    height: 70px;
+}
+

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 // import google_icon from "../../assets/google_icon.png";
 import "./SignupScreen.css";
+import { useNavigate } from 'react-router-dom';
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function SignupScreen() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("Mr");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -44,10 +47,12 @@ export default function SignupScreen() {
     });
     result = await result.json();
     console.warn("user-info", result);
+    navigate('/')
   }
 
   return (
-    <div className="signup">
+    <div className="signup" style={{paddingTop: "120px"}}>
+      <Navbar/>
       <div className="signup_container">
         <h2>Sign up</h2>
 

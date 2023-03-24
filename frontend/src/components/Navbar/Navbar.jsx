@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { MenuItems } from "../Lists/MenuItems";
 import "./NavbarStyles.css";
 import miit_logo from "../../assets/miit_logo.png";
+import kae_logo from "../../assets/kae_profile.jpg"
 
 class Navbar extends Component {
   state = { clicked: false };
@@ -14,7 +15,7 @@ class Navbar extends Component {
     return (
       <nav className="NavbarItems">
         {/* <h1 className="navbar-logo">MIIT</h1> */}
-        <img src={miit_logo} alt="" className="navbar-logo" />
+        <img style={{width: "80px", height: "80px"}} src={kae_logo} alt="" className="navbar-logo" />
         <div className="menu-icons" onClick={this.handleClicked}>
           <i
             className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}

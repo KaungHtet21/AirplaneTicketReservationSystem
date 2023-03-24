@@ -4,18 +4,22 @@ import "./LoginScreen.css";
 import paper_plane from "../../assets/paper_plane.gif";
 import google_icon from "../../assets/google_icon.png";
 import { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function LoginScreen() {
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLoginOnClick = () => {
-    console.log(email + ' ' + password);
+    if (email.length == 0 || password.length == 0 ) {
+      alert("Validation Error")
+    }
   }
 
   return (
-    <div className="login">
+    <div className="login" style={{paddingTop: "100px"}}>
+      <Navbar/>
       <div className="login_container">
         <img className="login_image" src={paper_plane} alt="" />
         <form className="auth_info_wrapper" action="" method="post">
@@ -25,6 +29,7 @@ export default function LoginScreen() {
             <input
               type="text"
               className="input"
+              value={email}
               placeholder="Enter your email address"
               onChange={e=>setEmail(e.target.value)}
             />

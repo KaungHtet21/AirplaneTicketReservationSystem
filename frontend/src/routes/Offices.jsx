@@ -9,7 +9,7 @@ export default function Offices() {
       <Navbar />
       <div style={{ padding: "50px", marginTop: "70px" }}>
         <h2 style={{ color: "#065a9e", marginBottom: "30px" }}>Our Stations</h2>
-        <h3 style={{ color: "#065a9e", marginBottom: "6px" }}>Air MIIT Limited</h3>
+        <h3 style={{ color: "#065a9e", marginBottom: "6px" }}>Air KAE Limited</h3>
         <ul style={{ listStyle: "none" }}>
           <li>International Business Center (IBC)</li>
           <li>No. 88, 11 Quarter, Pyay Road, Hlaing Township</li>
@@ -18,11 +18,11 @@ export default function Offices() {
           <li>
             Email:{" "}
             <a href="" style={{ textDecoration: "none", color: "#065a9e" }}>
-              info@airkbz.com
+              info@airkae.com
             </a>
           </li>
         </ul>
-        <h3 style={{ color: "#065a9e", marginBottom: "20px", marginTop: "20px" }}>Air MIIT (Ticketing & Sales Offices)</h3>
+        <h3 style={{ color: "#065a9e", marginBottom: "20px", marginTop: "20px" }}>Air KAE (Ticketing & Sales Offices)</h3>
         {OfficesList.map((item,index) => {
             return(
                 <div>

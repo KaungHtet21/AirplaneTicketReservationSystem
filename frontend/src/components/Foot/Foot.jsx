@@ -17,7 +17,7 @@ export default function Foot() {
           <div
             style={{ color: "#fff", fontSize: "15px", marginBottom: "10px" }}
           >
-            Air MIIT Experience
+            Air KAE Experience
           </div>
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="foot_text">Home</div>
@@ -41,14 +41,19 @@ export default function Foot() {
           >
             Plan Your Journey
           </div>
+          <Link to="/fly" style={{textDecoration: "none"}}>
           <div className="foot_text">Flight Schedules</div>
+          </Link>
+          
           <Link to="/terms&conditions" style={{ textDecoration: "none" }}>
             <div className="foot_text">Terms and Conditions</div>
           </Link>
           <Link to="/travel_policy" style={{ textDecoration: "none" }}>
             <div className="foot_text">Travel Policy</div>
           </Link>
-          <div className="foot_text">General FAQs</div>
+          <Link to="/baggage" style={{ textDecoration: "none" }}>
+            <div className="foot_text">Excess Baggage Rate</div>
+          </Link>
         </div>
         <div className="foot_follow_us">
           <div

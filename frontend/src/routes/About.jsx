@@ -23,12 +23,6 @@ export default function About() {
             </div>
           );
         })}
-        <ul style={{marginLeft: "40px"}}>
-          <li>Enhance internal service quality</li>
-          <li>Produce greater service value</li>
-          <li>Ensure customer loyalty</li>
-          <li>Create a healthy environment for growth</li>
-        </ul>
       </div>
       <Foot/>
     </>

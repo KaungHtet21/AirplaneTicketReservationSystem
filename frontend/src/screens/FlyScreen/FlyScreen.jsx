@@ -1,43 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./FlyScreen.css";
 import { Stack, Autocomplete, TextField } from "@mui/material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import Radio from "@mui/material";
-import RadioGroup from "@mui/material";
-import Box from "@mui/material";
-
-const from_cities = [
-  "Yangon",
-  "Mandalay",
-  "Nay Pyi Taw",
-  "Pyin Oo Lwin",
-  "Chaung Thar",
-];
-const to_cities = [
-  "Yangon",
-  "Mandalay",
-  "Nay Pyi Taw",
-  "Pyin Oo Lwin",
-  "Chaung Thar",
-];
+import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 function FlyScreen() {
+  // Navigation
+  const navigate = useNavigate();
+
+  // Get flight data from Laravel
+  const [flightsData, setFlightsData] = useState([]);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/flight")
+      .then((response) => response.json())
+      .then((data) => setFlightsData(data));
+  }, []);
+
+  // OneWay or RoundTrip
   const [oneWay, setOneWay] = useState(true);
   const [roundTrip, setRoundTrip] = useState(false);
-  const [departureDate, setDepartureDate] = useState(null);
-  const [returnDate, setReturnDate] = useState(null);
-  const [showTravller, setShowTravller] = useState(false);
-  const [numAdults, setNumAdults] = useState(1);
-  const [numChildren, setNumChildren] = useState(0);
-  const [numInfants, setNumInfants] = useState(0);
-
-  const placeholderText = `${numAdults} Adult${
-    numAdults > 1 ? "s" : ""
-  }, ${numChildren} Child${numChildren > 1 ? "ren" : ""}${
-    numInfants > 0 ? `, ${numInfants} Infant${numInfants > 1 ? "s" : ""}` : ""
-  }`;
 
   function handleClickOneway() {
     setOneWay(true);
@@ -48,6 +32,18 @@ function FlyScreen() {
     setRoundTrip(true);
     setOneWay(false);
   }
+
+  // Date Picker
+  const [departureDate, setDepartureDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+
+  // Passenger
+  const [showTravller, setShowTravller] = useState(false);
+  const [numAdults, setNumAdults] = useState(1);
+  const [numChildren, setNumChildren] = useState(0);
+  const placeholderText = `${numAdults} Adult${
+    numAdults > 1 ? "s" : ""
+  }, ${numChildren} Child${numChildren > 1 ? "ren" : ""}`;
 
   function toggleTraveller() {
     setShowTravller(!showTravller);
@@ -60,9 +56,6 @@ function FlyScreen() {
         break;
       case "children":
         setNumChildren(numChildren + 1);
-        break;
-      case "infants":
-        setNumInfants(numInfants + 1);
         break;
       default:
         break;
@@ -77,13 +70,67 @@ function FlyScreen() {
       case "children":
         if (numChildren > 0) setNumChildren(numChildren - 1);
         break;
-      case "infants":
-        if (numInfants > 0) setNumInfants(numInfants - 1);
-        break;
       default:
         break;
     }
   }
+
+  const [passengerType, setPassengerType] = useState("Myanmar");
+
+  const [fromCity, setFromCity] = useState("");
+  const from_cities = [
+    ...new Set(flightsData.map((flightData) => flightData.from)),
+  ];
+  const [toCity, setToCity] = useState("");
+  const to_cities = [
+    ...new Set(
+      flightsData
+        .filter((flightData) => flightData.from === fromCity)
+        .map((flightData) => flightData.to)
+    ),
+  ];
+
+  const [error, setError] = useState(false);
+
+  function handleSearchFlightBtn() {
+    if (oneWay) {
+      if (fromCity == "" || toCity == "" || departureDate == "") {
+        setError(true);
+      } else {
+        // console.log(fromCity)
+        // console.log(moment(departureDate).format("YYYY-MM-DD"))
+        setError(false);
+        navigate(
+          `/flightSection?oneWayOrRoundTrip=oneway&from=${fromCity}&to=${toCity}&departure_date=${moment(
+            departureDate
+          ).format(
+            "YYYY-MM-DD"
+          )}&return_date=${returnDate}&adults=${numAdults}&children=${numChildren}&passenger_type=${passengerType}`
+        );
+      }
+    }
+
+    if (roundTrip) {
+      if (
+        fromCity == "" ||
+        toCity == "" ||
+        departureDate == "" ||
+        returnDate == ""
+      ) {
+        setError(true);
+      } else {
+        setError(false);
+        navigate(
+          `/flightSection?oneWayOrRoundTrip=roundtrip&from=${fromCity}&to=${toCity}&departure_date=${moment(
+            departureDate
+          ).format("YYYY-MM-DD")}&return_date=${moment(returnDate).format(
+            "YYYY-MM-DD"
+          )}&adults=${numAdults}&children=${numChildren}&passenger_type=${passengerType}`
+        );
+      }
+    }
+  }
+
   return (
     <div className="fly">
       <div className="fly_container">
@@ -103,7 +150,9 @@ function FlyScreen() {
         </ul>
         <Stack spacing={2} width="100%">
           <Autocomplete
+            // options={from_cities}
             options={from_cities}
+            onChange={(event, newValue) => setFromCity(newValue)}
             renderInput={(params) => <TextField {...params} label="From" />}
           />
         </Stack>
@@ -111,6 +160,7 @@ function FlyScreen() {
         <Stack spacing={2} width="100%">
           <Autocomplete
             options={to_cities}
+            onChange={(event, newValue) => setToCity(newValue)}
             renderInput={(params) => <TextField {...params} label="To" />}
           />
         </Stack>
@@ -133,7 +183,7 @@ function FlyScreen() {
                 value={returnDate}
                 onChange={(date) => setReturnDate(date)}
                 renderInput={(params) => <TextField {...params} />}
-                minDate={departureDate}
+                minDate={departureDate + 1}
               />
             </LocalizationProvider>
           )}
@@ -163,22 +213,21 @@ function FlyScreen() {
                 <button onClick={() => incrementCount("children")}>+</button>
               </div>
             </div>
-            <div className="passenger_count">
-              <div className="passenger_type">Infants</div>
-              <div className="passenger_controls">
-                <button onClick={() => decrementCount("infants")}>-</button>
-                <span>{numInfants}</span>
-                <button onClick={() => incrementCount("infants")}>+</button>
-              </div>
-            </div>
           </div>
         )}
-        <Box style={{display: "flex", alignItems: 'center', gap: 2}}>
-          <RadioGroup>
-            
-          </RadioGroup>
-        </Box>
-        <button>Search</button>
+        <div>
+          <select style={{width: "150px"}} value={passengerType} onChange={(e)=> setPassengerType(e.target.value)} name="Passenger Type" id="">
+            <option value="Myanmar">Myanmar</option>
+            <option value="Foreigner">Foreigner</option>
+          </select>
+        </div>
+
+        <button className="search_flight_btn" onClick={handleSearchFlightBtn}>
+          Search
+        </button>
+        <span style={{ color: "red" }} className={error ? "" : "error_display"}>
+          *Fill Info to go on
+        </span>
       </div>
     </div>
   );
